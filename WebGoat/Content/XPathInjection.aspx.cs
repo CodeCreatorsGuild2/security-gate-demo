@@ -25,7 +25,7 @@ namespace OWASP.WebGoat.NET
         {
             XmlDocument xDoc = new XmlDocument();
             xDoc.LoadXml(xml);
-            XmlNodeList list = xDoc.SelectNodes("//salesperson1[state='" + state + "']");
+            XmlNodeList list = xDoc.SelectNodes("//salesperson2[state='" + state + "']");
             if (list.Count > 0)
             {
 
