@@ -23,6 +23,10 @@ namespace OWASP.WebGoat.NET
 
         private void FindSalesPerson(string state)
         {
+            // Introducing somthing that shouldn't create an alert
+            XmlDocument xDoc2 = new XmlDocument();
+            xDoc2.LoadXml(xml);
+
             XmlDocument xDoc = new XmlDocument();
             xDoc.LoadXml(xml);
             XmlNodeList list = xDoc.SelectNodes("//salesperson[state='" + state + "']");
